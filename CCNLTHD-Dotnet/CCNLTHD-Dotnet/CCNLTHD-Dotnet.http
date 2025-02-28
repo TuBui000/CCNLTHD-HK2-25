@@ -1,0 +1,6 @@
+@CCNLTHD_Dotnet_HostAddress = http://localhost:5215
+
+GET {{CCNLTHD_Dotnet_HostAddress}}//
+Accept: application/json
+
+###

@@ -1,0 +1,60 @@
+[
+  {
+    "ContainingType": "CCNLTHD_Dotnet.Controllers.TodoListController",
+    "Method": "Get",
+    "RelativePath": "api/TodoList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CCNLTHD_Dotnet.Controllers.TodoListController",
+    "Method": "Post",
+    "RelativePath": "api/TodoList",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newTodoList",
+        "Type": "CCNLTHD_Dotnet.Data.Entities.TodoList",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CCNLTHD_Dotnet.Controllers.TodoListController",
+    "Method": "Del",
+    "RelativePath": "api/TodoList/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CCNLTHD_Dotnet.Controllers.TodoListController",
+    "Method": "Get",
+    "RelativePath": "api/TodoList/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
