@@ -1,11 +1,53 @@
-
 /* hover icon for HomeView*/
 .hover-shadow {
     transition: box-shadow 0.3s ease-in-out;
 }
-.hover-shadow:hover{
+
+.hover-shadow:hover {
     transition: box-shadow 0.3s ease-in-out;
     box-shadow: 0 0 1.25rem 0.3rem rgba(249, 0, 0, 0.849);
 }
 
 /* TodoList */
+.bg-todo {
+    background-color: rgb(255, 193, 131);
+}
+
+.card-todo {
+    max-height: 10rem;
+    border: 1rem;
+    border-radius: 2rem;
+    background-color: whitesmoke;
+}
+
+.input-todo {
+    justify-items: center;
+}
+
+.input-gr{
+    display: flex;
+    align-items: center;
+    border: px solid #ffffff;
+    border-radius: 10rem;
+    overflow: hidden;
+}
+.input-gr input {
+    background-color:  rgb(255, 222, 190);
+    flex: 1;
+    border: none;
+    padding: 18px;
+    outline: none;
+}
+.input-gr button {
+    background-color:rgb(255, 141, 26);
+    color: white;
+    border: none;
+    padding: 18px 30px;
+    cursor: pointer;
+    
+}
+.input-gr button:hover {
+    background-color: #ffffff;
+    color:rgb(255, 141, 26)  ;
+}
+
