@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CCNLTHD-Dotnet")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fe1d68515a5372433807b691d0926e6e0340cf52")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6147a129f1dffcb905e3dac7ba229cc9800bcc12")]
 [assembly: System.Reflection.AssemblyProductAttribute("CCNLTHD-Dotnet")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CCNLTHD-Dotnet")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -9,3 +9,77 @@
 }
 
 /* TodoList */
+<<<<<<< Updated upstream
+=======
+.bg-todo {
+    background-color: rgb(255, 193, 131);
+}
+
+.card-todo {
+    border: 1rem;
+    border-radius: 2rem;
+    background-color: whitesmoke;
+}
+
+.scrollbar{
+    overflow-x: hidden;
+    overflow-y: auto;     
+    max-height: 25rem;
+}
+.scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+.scrollbar .row{
+    background-color:  rgb(255, 222, 190);
+    border-radius: 1rem;
+}
+.pen{
+    color: blue;
+}
+.trash{
+    color: red;
+}
+
+.input-todo {
+    justify-items: center;
+}
+
+.input-gr{
+    display: flex;
+    align-items: center;
+    border: px solid #ffffff;
+    border-radius: 10rem;
+    overflow: hidden;
+}
+.input-gr input {
+    background-color:  rgb(255, 222, 190);
+    flex: 1;
+    border: none;
+    padding: 18px;
+    outline: none;
+}
+.input-gr button {
+    background-color:rgb(255, 141, 26);
+    color: white;
+    border: none;
+    padding: 18px 30px;
+    cursor: pointer;
+    
+}
+.input-gr button:hover {
+    background-color: #ffffff;
+    color:rgb(255, 141, 26)  ;
+}
+
+>>>>>>> Stashed changes

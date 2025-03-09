@@ -27,6 +27,22 @@
   },
   {
     "ContainingType": "CCNLTHD_Dotnet.Controllers.TodoListController",
+    "Method": "Put",
+    "RelativePath": "api/TodoList",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "todoToEdit",
+        "Type": "CCNLTHD_Dotnet.Data.Entities.TodoList",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CCNLTHD_Dotnet.Controllers.TodoListController",
     "Method": "Del",
     "RelativePath": "api/TodoList/{id}",
     "HttpMethod": "DELETE",
