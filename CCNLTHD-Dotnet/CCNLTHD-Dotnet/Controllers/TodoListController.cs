@@ -27,10 +27,7 @@ namespace CCNLTHD_Dotnet.Controllers
         [HttpPost]
         public async Task<IActionResult> Post(TodoList newTodoList)
         {
-            if(newTodoList.Status == null)
-            {
-                newTodoList.Status = false;
-            }
+
             _dbContextApp.TodoList.Add(newTodoList);
             await _dbContextApp.SaveChangesAsync();
             return Ok(newTodoList);
