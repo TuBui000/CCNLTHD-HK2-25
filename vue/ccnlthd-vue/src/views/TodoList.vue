@@ -49,8 +49,7 @@ const ConfirmDel = () => {
 
 </script> -->
 <script setup>
-<<<<<<< Updated upstream
-=======
+
 import axios from 'axios';
 import { onMounted, ref } from 'vue';
 import ComfirmDel from './ComfirmDel.vue';
@@ -63,7 +62,6 @@ const newTodo = ref({
     title: "",
     date: new Date().toISOString() // 🗓 Lấy ngày hiện tại
 });
-
 
 const cities = (["HN", "HCM"])
 
@@ -115,17 +113,12 @@ onMounted(() => {
     getTodos();
 });
 
->>>>>>> Stashed changes
+
 
 </script>
 
 <template>
-<<<<<<< Updated upstream
-    <div class="bg-dark d-flex align-items-center justify-content-center vh-100">
-        <div class="container text-center p-4">
-            <div class="justify-content-center g-0">
-                <h2 class="text-bg-dark">Todo List</h2>
-=======
+
     <div class="bg-todo d-flex align-items-center justify-content-center vh-100">
         <div class="container text-center w-50">
             <div class="d-flex justify-content-start">
@@ -177,7 +170,7 @@ onMounted(() => {
                         </div>
                     </div>
                 </div>
->>>>>>> Stashed changes
+
             </div>
             
         </div>
