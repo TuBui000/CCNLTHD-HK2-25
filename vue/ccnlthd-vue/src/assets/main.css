@@ -68,6 +68,17 @@
     padding: 18px;
     outline: none;
 }
+
+.input-gr select{
+    background-color:rgb(255, 141, 26);
+    height: 3.75rem;
+    color: white;
+    border: none;
+}
+.input-gr select:hover{
+    border: none;
+}
+
 .input-gr button {
     background-color:rgb(255, 141, 26);
     color: white;

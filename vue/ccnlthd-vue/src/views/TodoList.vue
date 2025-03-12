@@ -58,6 +58,8 @@ import { useRouter } from 'vue-router';
 const router = useRouter();
 const todolist = ref([]);
 const deleteItemId = ref(null);
+
+
 const newTodo = ref({
     title: "",
     date: new Date().toISOString() // 🗓 Lấy ngày hiện tại
@@ -67,7 +69,9 @@ const cities = (["HN", "HCM"])
 
 let deleteModalInstance;
 
-// ✅ Hàm lấy danh sách todo
+
+
+// Hàm lấy danh sách todo
 const getTodos = async () => {
     try {
         const response = await axios.get('https://localhost:7002/api/TodoList');
@@ -77,7 +81,7 @@ const getTodos = async () => {
     }
 };
 
-// ✅ Hàm thêm todo
+// Hàm thêm todo
 const addTodo = async () => {
     if (!newTodo.value.title.trim()) return; // Không cho phép thêm todo rỗng
 
@@ -90,13 +94,14 @@ const addTodo = async () => {
     }
 };
 
-// ✅ Hàm mở modal xóa
+// Hàm mở modal xóa
 const OpenModalDel = (id) => {
     deleteItemId.value = id;
     deleteModalInstance.show();
 };
 
-// ✅ Hàm xác nhận xóa todo
+
+// Hàm xác nhận xóa todo
 const ConfirmDel = async () => {
     try {
         await axios.delete(`https://localhost:7002/api/TodoList/${deleteItemId.value}`);
@@ -107,18 +112,15 @@ const ConfirmDel = async () => {
     }
 };
 
-// ✅ Khi component được mount, lấy danh sách todo
+// Khi component được mount, lấy danh sách todo
 onMounted(() => {
     deleteModalInstance = new window.bootstrap.Modal(document.getElementById('deleteform'));
     getTodos();
 });
 
-
-
 </script>
 
 <template>
-
     <div class="bg-todo d-flex align-items-center justify-content-center vh-100">
         <div class="container text-center w-50">
             <div class="d-flex justify-content-start">
@@ -132,8 +134,8 @@ onMounted(() => {
                     <div class="input-gr mb-3 w-50">
                         <input type="text" placeholder="Add new todo" aria-label="Add new todo"
                             aria-describedby="button-addtodo" v-model="newTodo.title">
-                        <select v-model="newTodo.city" id="comboBox" >
-                            <option v-for="city in cities" :key="city" :value="city" >
+                        <select v-model="newTodo.city" id="comboBox">
+                            <option v-for="city in cities" :key="city" :value="city">
                                 {{ city }}
                             </option>
                         </select>
@@ -163,19 +165,18 @@ onMounted(() => {
                             {{ item.date.split('T')[0] }}
                         </div>
                         <div class="col-1 p-0 pen ">
-                            <i class="fa-regular fa-pen-to-square btn"></i>
+                            <RouterLink :to="`/edit/${item.id}`">
+                                <i class="fa-regular fa-pen-to-square btn"></i>
+                            </RouterLink>
                         </div>
                         <div class="col-1 p-0 trash">
                             <i class="fa-regular fa-trash-can btn" @click="($event) => OpenModalDel(item.id)"></i>
                         </div>
                     </div>
                 </div>
-
             </div>
-            
+
         </div>
         <ComfirmDel @confirm-delete-click="ConfirmDel"></ComfirmDel>
     </div>
 </template>
-
-
