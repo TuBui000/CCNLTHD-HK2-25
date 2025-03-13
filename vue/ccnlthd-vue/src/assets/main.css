@@ -82,3 +82,103 @@
 }
 
 
+/*Weather*/
+.bg-weather{
+    font-family: 'montserrat', sans-serif;
+    background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.75)), url('../image/weather/bg-cold.jpg');
+    background-size:cover; 
+    background-position: center; 
+    justify-items: center;
+    align-content: center;
+    transition: 0.4s;
+}
+
+.bg-weather.warm{
+    background-image:linear-gradient(to bottom, rgba(63, 62, 62, 0.25), rgba(149, 139, 117, 0.75)), url('../image/weather/bg-warm.jpg');
+}
+
+.bg-weather.warm .search-box .search-bar{
+    padding: 0.8rem;
+    color: rgb(0, 0, 0, 0.5);
+    font-size: 20px;
+}
+
+.bg-weather .row{
+
+    width: 50rem;
+}
+
+.search-box{
+    width: 100%;
+    margin-right: 3rem;
+    margin-bottom: 2rem;
+    justify-items: center;
+}
+.search-box .search-bar{
+    width: 20rem;
+    display: block;
+    outline: none;
+    padding: 0.8rem;
+    color: white;
+    font-size: 20px;
+
+    appearance: none;
+    border: none;
+    background: none;
+
+    box-shadow: 0 0 8px rgb(0, 0, 0, 0.25);
+    background-color: rgb(255, 255, 255, 0.5);
+    border-radius: 0 16px 0 16px;
+    transition: 0.4s;
+}
+.search-bar::placeholder{
+    color: white;
+}
+
+.search-box .search-bar:focus{
+    border-radius: 16px 0px 16px 0px;
+    background-color: rgb(255, 255, 255, 0.75);
+    box-shadow: 0 0 16px rgb(0, 0, 0, 0.25);
+}
+
+.location-box{
+    color: #fff;
+    text-align: center;
+
+}
+.location-box .location{
+    font-size: 32px;
+    font-weight: 500;
+    text-shadow: 1px 3px rgb(0, 0, 0, 0.25);
+}
+
+.location-box .date{
+    font-size: 20px;
+    font-style: italic;
+}
+
+.weather-box{
+    text-align: center;
+    color: #fff;
+    text-shadow: 3px 6px rgba(0, 0, 0, 0.25);
+}
+.weather-box .temp{
+    display: inline-block;
+    padding: 10px 25px;
+    
+    font-size: 8rem;
+    font-weight:900;
+
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 2rem;
+    margin: 30px 0;
+
+    box-shadow: 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+.weather-box .weather{
+    font-size: 3rem;
+    font-weight: 600;
+    font-style: italic;
+}
+

@@ -52,7 +52,7 @@ const ConfirmDel = () => {
 
 import axios from 'axios';
 import { onMounted, ref } from 'vue';
-import ComfirmDel from './ComfirmDel.vue';
+import ComfirmDel from '../TodoList/ComfirmDel.vue';
 import { useRouter } from 'vue-router';
 
 const router = useRouter();
@@ -70,8 +70,10 @@ let deleteModalInstance;
 // ✅ Hàm lấy danh sách todo
 const getTodos = async () => {
     try {
-        const response = await axios.get('https://localhost:7002/api/TodoList');
-        todolist.value = response.data;
+         axios.get('https://localhost:7002/api/TodoList')
+         .then((response) => {
+            todolist.value = response.data;
+         });
     } catch (error) {
         console.error("Lỗi khi lấy danh sách todo:", error);
     }
@@ -163,7 +165,9 @@ onMounted(() => {
                             {{ item.date.split('T')[0] }}
                         </div>
                         <div class="col-1 p-0 pen ">
-                            <i class="fa-regular fa-pen-to-square btn"></i>
+                            <RouterLink :to="`/edit/${item.id}`">
+                                <i class="fa-regular fa-pen-to-square btn"></i>
+                            </RouterLink>
                         </div>
                         <div class="col-1 p-0 trash">
                             <i class="fa-regular fa-trash-can btn" @click="($event) => OpenModalDel(item.id)"></i>
