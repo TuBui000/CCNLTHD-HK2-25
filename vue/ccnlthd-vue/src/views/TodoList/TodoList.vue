@@ -52,7 +52,7 @@ const ConfirmDel = () => {
 
 import axios from 'axios';
 import { onMounted, ref } from 'vue';
-import ComfirmDel from './ComfirmDel.vue';
+import ComfirmDel from '../TodoList/ComfirmDel.vue';
 import { useRouter } from 'vue-router';
 
 const router = useRouter();
