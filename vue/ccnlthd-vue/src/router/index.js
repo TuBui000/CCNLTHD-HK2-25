@@ -1,9 +1,9 @@
-
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import TodoList from "../views/TodoList/TodoList.vue";
 import EditTodo from "../views/TodoList/EditTodo.vue";
 import Weather from "../views/Weather/Weather.vue";
+import Calculator from "../views/Calculator/Calculator.vue";
 
 
 const router = createRouter({
@@ -28,6 +28,11 @@ const router = createRouter({
       path: "/weather",
       name: "weather",
       component: Weather,
+    },
+    {
+      path: "/calculator",
+      name: "calculator",
+      component: Calculator,
     },
   ],
 });
