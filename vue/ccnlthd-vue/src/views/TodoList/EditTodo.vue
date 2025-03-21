@@ -6,12 +6,13 @@ import { useRoute, useRouter } from 'vue-router';
 
 const route = useRoute();
 const router = useRouter();
-const cities = ["HN", "HCM"];
+// const cities = ["HN", "HCM"];
 
 let todoToUpdate = reactive({
     id: 0,
     title: '',
-    city: '',
+    // city:'',
+    deadline: '',
     date: ''
 });
 
@@ -22,7 +23,8 @@ onMounted(() => {
         .then((response) => {
             todoToUpdate.id = response.data.id;
             todoToUpdate.title = response.data.title;
-            todoToUpdate.city = response.data.city;
+            // todoToUpdate.city = response.data.city;
+            todoToUpdate.deadline = response.data.deadline;
             todoToUpdate.date = response.data.date;
         });
 });
@@ -47,11 +49,12 @@ const updateTodo = () => {
             </div>
             <div class="mb-3">
                 <label for="txtcity" class="form-label">Location</label>
-                <select v-model="todoToUpdate.city" id="comboBox">
+                <!-- <select v-model="todoToUpdate.city" id="comboBox">
                     <option v-for="city in cities">
                         {{ city }}
                     </option>
-                </select>
+                </select> -->
+                <input type="date" v-model="todoToUpdate.deadline">
             </div>
             <button type="submit" class="btn btn-primary">Update</button>
         </form>

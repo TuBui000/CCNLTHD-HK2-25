@@ -75,6 +75,19 @@
     color: white;
     border: none;
 }
+.input-deadline::-webkit-datetime-edit-text,
+.input-deadline::-webkit-datetime-edit-month-field,
+.input-deadline::-webkit-datetime-edit-day-field,
+.input-deadline::-webkit-datetime-edit-year-field {
+    display: none;
+}
+.input-deadline{
+    width: 10%;
+}
+.deadline{
+    color: red;
+}
+
 .input-gr select:hover{
     border: none;
 }

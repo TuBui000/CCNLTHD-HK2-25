@@ -65,7 +65,8 @@ const newTodo = ref({
     date: new Date().toISOString() // 🗓 Lấy ngày hiện tại
 });
 
-const cities = (["HN", "HCM"])
+// const cities = (["HN", "HCM"])
+
 
 let deleteModalInstance;
 
@@ -134,11 +135,12 @@ onMounted(() => {
                     <div class="input-gr mb-3 w-50">
                         <input type="text" placeholder="Add new todo" aria-label="Add new todo"
                             aria-describedby="button-addtodo" v-model="newTodo.title">
-                        <select v-model="newTodo.city" id="comboBox">
-                            <option v-for="city in cities" :key="city" :value="city">
+                        <!-- <select v-model="newTodo.city" id="comboBox">
+                            <option v-for="city in cities" :key="deadline" :value="deadline">
                                 {{ city }}
                             </option>
-                        </select>
+                        </select> -->
+                        <input type="date" class="input-deadline" v-model="newTodo.deadline">
                         <button type="submit" id="button-addtodo">
                             <i class="fa-solid fa-plus"></i>
                         </button>
@@ -154,15 +156,16 @@ onMounted(() => {
                         <div class="col-1 p-0 ">
                             <i class="fa-regular fa-circle"></i>
                         </div>
-                        <div class="col-6 p-0 d-flex justify-content-start fw-medium fs-5">
+                        <div class="col-4 p-0 d-flex justify-content-start fw-medium fs-5">
                             {{ item.title }}
-                        </div>
-                        <div class="col-1 p-0 d-flex justify-content-start fw-medium fs-5">
-                            {{ item.city }}
                         </div>
                         <div class="col-2 p-0 fw-lighter">
                             <!-- chỉ lấy ngày -->
                             {{ item.date.split('T')[0] }}
+                        </div>
+                        <div class="col-2 deadline p-0 fw-lighter">
+                            <!-- chỉ lấy ngày -->
+                            {{ item.deadline.split('T')[0] }}
                         </div>
                         <div class="col-1 p-0 pen ">
                             <RouterLink :to="`/edit/${item.id}`">
