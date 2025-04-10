@@ -8,13 +8,13 @@ namespace CCNLTHD_Dotnet.Data.Entities
         [Key]
         public int Id { get; set; }
 
-        public string City { get; set; }
+        //public string City { get; set; }
 
         [Required]
         public string Title { get; set; }
-
   
         public DateTime Date { get; set; }
+        public DateTime Deadline { get; set; }
  
     }
 }
